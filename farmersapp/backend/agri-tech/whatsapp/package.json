@@ -1,0 +1,17 @@
+{
+  "name": "whatsapp-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Info: No test specified\" && exit 0",
+    "build": "echo \"Info: No build specified\" && exit 0",
+    "start": "node app.js"
+  },
+  "author": "MicroBits",
+  "license": "ISC",
+  "dependencies": {
+    "request": "^2.88.0",
+    "sulla": "^1.1.3"
+  }
+}

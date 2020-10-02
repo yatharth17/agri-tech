@@ -1,0 +1,275 @@
+{
+	"variables": [],
+	"info": {
+		"name": "SIH_DB",
+		"_postman_id": "22d2994a-0d3b-958e-f653-d646fddc1f6e",
+		"description": "Postman Collection for testing the API for database.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:5000/api/db/bid",
+			"request": {
+				"url": "http://localhost:5000/api/db/bid",
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/api/db/bid/get",
+			"request": {
+				"url": {
+					"raw": "http://localhost:5000/api/db/bid/get?item_id=5e1495f92c3ce548ccf8b343",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"db",
+						"bid",
+						"get"
+					],
+					"query": [
+						{
+							"key": "item_id",
+							"value": "5e1495f92c3ce548ccf8b343"
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/api/db/bid/create",
+			"request": {
+				"url": {
+					"raw": "http://localhost:5000/api/db/bid/create?",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"db",
+						"bid",
+						"create"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "5e1495f92c3ce548ccf8b343",
+							"disabled": true
+						},
+						{
+							"key": "seller_id",
+							"value": "1",
+							"disabled": true
+						},
+						{
+							"key": "item_name",
+							"value": "myitem",
+							"disabled": true
+						},
+						{
+							"key": "description",
+							"value": "Dejavu",
+							"disabled": true
+						},
+						{
+							"key": "price",
+							"value": "12",
+							"disabled": true
+						},
+						{
+							"key": "fixed_price",
+							"value": "18",
+							"disabled": true
+						},
+						{
+							"key": "quantity",
+							"value": "2",
+							"disabled": true
+						},
+						{
+							"key": "name",
+							"value": "adisakshya",
+							"disabled": true
+						},
+						{
+							"key": "image_url",
+							"value": "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/inspirational-quotes-william-james-1562000241.png?crop=1xw:1xh;center,top%26resize=480:*",
+							"disabled": true
+						},
+						{
+							"key": "curr_bidprice",
+							"value": "0",
+							"disabled": true
+						},
+						{
+							"key": "curr_highestBidderusername",
+							"value": "adisakshya",
+							"disabled": true
+						}
+					],
+					"variable": []
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "Banna",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "It is very good source for calcium and potassium",
+							"type": "text"
+						},
+						{
+							"key": "image_url",
+							"value": "https://banana.in",
+							"type": "text"
+						},
+						{
+							"key": "price",
+							"value": "30",
+							"type": "text"
+						},
+						{
+							"key": "fixed_price",
+							"value": "40",
+							"type": "text"
+						},
+						{
+							"key": "quantity",
+							"value": "100",
+							"type": "text"
+						},
+						{
+							"key": "curr_bidprice",
+							"value": "0",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "curr_highestBidderusername",
+							"value": "None",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "token",
+							"value": "1",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "seller_name",
+							"value": "avikant",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "timer_limit",
+							"value": "20:00:00",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/api/db/bid/delete",
+			"request": {
+				"url": "http://localhost:5000/api/db/bid/delete",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "id",
+							"value": "5e16e1660a901940b048cee7",
+							"type": "text"
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/api/db/bid/update",
+			"request": {
+				"url": "http://localhost:5000/api/db/bid/update",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "id",
+							"value": "5e16e3ba4e767d44444d9b96",
+							"type": "text"
+						},
+						{
+							"key": "curr_bidprice",
+							"value": "32",
+							"type": "text"
+						},
+						{
+							"key": "curr_highestBidderusername",
+							"value": "avikant",
+							"type": "text"
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,100 @@
+<main class="page pricing-table-page">
+  <section class="clean-block clean-pricing dark">
+    <div class="container">
+      <div class="block-heading">
+        <h2 class="text-info" class="fix-top">Market</h2>
+        <p>Grab the offer you are looking for, by placing bid on the available handpicked yields brought to you directly
+          from the farm fields.</p>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-md-4 col-lg-4" style="margin-bottom:5%;">
+          <div class="clean-pricing-item">
+            <img [src]="item.image_url" width="100%" alt="item_name" />
+            <hr>
+            <h4 class="text-center"><span class="feature">{{item.name}}</span></h4>
+            <p>{{item.description}}</p>
+            <div class="features">
+              <p *ngIf="item.sold_flag" class="alert alert-danger">Item Already Sold!!!</p>
+              <h4><span class="feature">Start Price:</span><span>{{item.price}}</span></h4>
+              <h4><span class="feature">Current Bid:</span><span></span></h4>
+            </div>
+            <div class="price">
+              <h4>{{item.curr_bidprice}}</h4>
+            </div><a [routerLink]="['/cart']">
+              <button class="btn btn-primary btn-block" type="button"> BUY NOW</button></a>
+            <button class="btn btn-outline-primary btn-block" role="button" data-toggle="modal" href="#modalitem1">PLACE
+              BID</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" role="dialog" tabindex="-1" id="modalitem1">
+      <div class="modal-dialog container" role="document" style="min-width:80%">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4>{{item.name}}</h4>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-md-6">
+                <img [src]="item.image_url" width="100%" height="100%" />
+              </div>
+              <div class="col-md-6">
+                <p class="text-center text-muted">{{item.description}}</p>
+                <hr>
+                <div class="row">
+                  <div class="col-md-6">
+                    <p class="text-muted btn">Current Highest Bidder: {{item.curr_highestBidderusername}}</p>
+                    <p class="text-muted">Seller Rating:
+                      <i class="fa fa-star" style="color:gold"></i>
+                      <i class="fa fa-star" style="color:gold"></i>
+                      <i class="fa fa-star" style="color:gold"></i>
+                      <i class="fa fa-star" style="color:gold"></i>
+                      <i class="fa fa-star"></i>
+                    </p>
+                    <p class="text-muted">Seller Location: Delhi</p>
+                  </div>
+                  <hr>
+                  <div class="col-md-6">
+                    <p class="text-muted" id="item_start_price">Start Price: <strong>{{item.price}}</strong></p>
+                    <p class="text-muted" id="item_current_bid">Current Bid: <strong>{{item.curr_bidprice}}</strong></p>
+                    <p class="text-muted" id="item_current_bid">Buy Now Price: <strong>{{item.fixed_price}}</strong></p>
+                  </div>
+                </div>
+                <hr>
+                <div class="bidzone">
+                  <form method="POST">
+                    <label for="bid_price">Your Bidding Amount</label>
+                    <br>
+                    <span class="btn btn-light" id="decrement" (click)="increaseby1()"><i class="fa fa-minus"></i> +
+                    </span>
+                    <input [(ngModel)]="bid_price" [value]="bid_price" name="bid_price" id="bid_price" type="number"
+                      placeholder="0" default="0" />
+                    <span class="btn btn-light" id="increment" (click)="decreaseby1()"><i class="fa fa-plus"></i> -
+                    </span>
+                    <br>
+                    <div *ngIf="errorFlag" class="alert alert-danger" role="alert">{{ errorMessage }}</div>
+                    <div *ngIf="!errorFlag && errorMessage != ''" class="alert alert-success" role="alert">{{ errorMessage }}</div>
+                    <button class="btn btn-dark" type="submit" (click)="placebid()">Place Bid</button>
+                  </form>
+                  <p class="text-muted">Note: Bid will be valid only if bid price is greater than current bid.<p>
+                      <hr>
+                      <p><strong>You can skip the bidding process &amp buy the item directly by paying the Buy Now
+                          Price.</strong></p>
+                      <form>
+                        <a [routerLink]="['/cart']">
+                          <button class="btn btn-primary" data-dismiss="modal" type="button">Buy Now</button>
+                        </a>
+                      </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-light" data-dismiss="modal" type="button">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>

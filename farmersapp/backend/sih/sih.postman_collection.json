@@ -1,0 +1,213 @@
+{
+	"info": {
+		"_postman_id": "5573a575-3147-94cc-0837-9d64eb2682e3",
+		"name": "sih",
+		"description": "sih2020 testing",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "OtpsentRequest",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "phone_number",
+							"value": "9811204579",
+							"type": "text"
+						},
+						{
+							"key": "otp",
+							"value": "273743",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "session_id",
+							"value": "5d2b1f84-3304-4030-a4bf-f08c69a9c1a0",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:5000/loginotp",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"loginotp"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "VerifyOtp",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "otp",
+							"value": "702078",
+							"type": "text"
+						},
+						{
+							"key": "session_id",
+							"value": "312e9002-0199-4e8e-aaa6-3ecf5ec0077d",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:5000/verifyotp",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"verifyotp"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "LoginUser",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "password",
+							"value": "test@123",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "avikant16@hotmail.com",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:5000/loginuser",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"loginuser"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Sending_Sms",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "phone_number",
+							"value": "9811204579",
+							"type": "text"
+						},
+						{
+							"key": "sms",
+							"value": "Agritech is sending you Bid SMS",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:5000/sendmail",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"sendmail"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "RegisterUser",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "email",
+							"value": "avikant16@hotmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "test@123",
+							"type": "text"
+						},
+						{
+							"key": "name",
+							"value": "Avikant",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:5000/registeruser",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"registeruser"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

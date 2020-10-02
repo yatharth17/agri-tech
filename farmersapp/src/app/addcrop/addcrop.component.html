@@ -1,0 +1,52 @@
+<app-navbar></app-navbar>
+<main class="page contact-us-page">
+  <section class="clean-block clean-form dark">
+    <div class="container">
+      <div class="block-heading">
+        <h2 class="text-info" class="fix-top">Add Crop Posting</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quam urna, dignissim nec auctor in, mattis
+          vitae leo.</p>
+      </div>
+      <form>
+        <div class="form-group"><label>Name of the Crop</label><input [(ngModel)]="name" name="name"
+            class="form-control" type="text"></div>
+        <div class="form-group"><label>Quantity</label><input [(ngModel)]="quantity" name="quantity"
+            class="form-control" type="number"></div>
+        <div class="form-group"><label>Starting Bidding price</label><input [(ngModel)]="biddingPrice"
+            name="biddingPrice" class="form-control" type="number"></div>
+        <div class="form-group"><label>Buy Now Price</label><input [(ngModel)]="buyNow" name="buyNow"
+            class="form-control" type="number"></div>
+        <div class="form-group"><label>Description</label><input [(ngModel)]="description" name="description"
+            class="form-control" type="text"></div>
+        <!-- Image Upload -->
+            <div class="form-group"><label>Upload Image</label><input name="biddingPrice"
+            class="form-control" type="file" (change)="onSelectedFile($event)"></div>
+
+        <div class="form-group"><button class="btn btn-primary btn-block" type="submit" (click)="onUpload()">Upload</button>
+        </div>
+
+        <div class="form-group">
+          <p *ngIf="isuploadingimage" class="alert alert-warning"> Uploading Details, Please Wait!</p>
+        </div>
+
+        <div class="form-group">
+          <p *ngIf="imageUploaded" class="alert alert-warning"> Image Successfully Uploaded!</p>
+        </div>
+
+        <!-- Image upload ends -->
+        <div class="form-group"><label>Hours for the Bid</label><input [(ngModel)]="timer_limit" name="timer_limit"
+            class="form-control" type="text"></div>
+        <div class="form-group">
+          <p *ngIf="isuploading" class="alert alert-success"> Uploading Details, Please Wait!</p>
+        </div>
+        <div class="form-group">
+          <p *ngIf="!isuploading && message != ''" class="alert alert-success">{{ message }}</p>
+        </div>
+        <div></div>
+        <div class="form-group"><button class="btn btn-primary btn-block" type="submit" (click)="post()">Send</button>
+        </div>
+      </form>
+    </div>
+  </section>
+</main>
+<app-footer></app-footer>

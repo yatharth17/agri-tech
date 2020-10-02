@@ -1,0 +1,22 @@
+<div class="clean-related-items">
+    <h3>Related Products</h3>
+    <div class="items">
+        <div class="row justify-content-center">
+            <div class="col-sm-6 col-lg-4" *ngFor="let item of items; index as i">
+                <div class="clean-related-item" *ngIf="i<3">
+                    <div class="image"><a href="#"><img class="img-fluid d-block mx-auto"
+                        [src]="item.image_url"></a>
+                    </div>
+                    <div class="related-name"><a href="#">{{item.name}}</a>
+                        <!-- <div *ngIf="items[i].sold_flag == 1" class="alert alert-danger"> Item Sold</div>
+                    <div *ngIf="timeout[i]" class="alert alert-danger"> Bid Expired</div> -->
+                        <div class="rating"><img src="assets/img/star.svg"><img src="assets/img/star.svg"><img
+                                src="assets/img/star.svg"><img src="assets/img/star-half-empty.svg"><img
+                                src="assets/img/star-empty.svg"></div>
+                        <h4>{{item.price}}</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
