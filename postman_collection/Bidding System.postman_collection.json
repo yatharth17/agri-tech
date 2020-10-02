@@ -1,0 +1,1300 @@
+{
+	"info": {
+		"_postman_id": "17321ed7-2092-44fe-8b4f-e924287428ef",
+		"name": "Bidding System",
+		"description": "Postman Collection for testing the API for bidding system.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:3000/api/bid",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "item_id",
+							"value": "5e1495f92c3ce548ccf8b343",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "token",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "bid_id",
+							"value": "5e1495f92c3ce548ccf8b343",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/bid",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"bid"
+					],
+					"query": [
+						{
+							"key": "password",
+							"value": "test",
+							"disabled": true
+						},
+						{
+							"key": "email",
+							"value": "adi@email.email",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/api/bid/get",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "item_id",
+							"value": "5e1495f92c3ce548ccf8b343",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "token",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "bid_id",
+							"value": "5e403f8edc796829b417463a",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/bid/get",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"bid",
+						"get"
+					],
+					"query": [
+						{
+							"key": "password",
+							"value": "test",
+							"disabled": true
+						},
+						{
+							"key": "email",
+							"value": "adi@email.email",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/api/bid/get",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "item_id",
+							"value": "5e1495f92c3ce548ccf8b343",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "token",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "bid_id",
+							"value": "5e1713417de4a20017f86ff6",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/bid/get",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"bid",
+						"get"
+					],
+					"query": [
+						{
+							"key": "password",
+							"value": "test",
+							"disabled": true
+						},
+						{
+							"key": "email",
+							"value": "adi@email.email",
+							"disabled": true
+						}
+					]
+				},
+				"description": "Bid Not Found!"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/api/bid/create",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "item_name",
+							"value": "laukiaaloorefactored",
+							"type": "text"
+						},
+						{
+							"key": "item_description",
+							"value": "LOL Vibe",
+							"type": "text"
+						},
+						{
+							"key": "image_url",
+							"value": "https://lauki.in",
+							"type": "text"
+						},
+						{
+							"key": "min_price",
+							"value": "30",
+							"type": "text"
+						},
+						{
+							"key": "buy_now_price",
+							"value": "40",
+							"type": "text"
+						},
+						{
+							"key": "quantity",
+							"value": "100",
+							"type": "text"
+						},
+						{
+							"key": "timer_limit",
+							"value": "100:00:00",
+							"type": "text"
+						},
+						{
+							"key": "",
+							"value": "None",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "token",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "seller_id",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "seller_name",
+							"value": "rafactored_adi2348",
+							"type": "text"
+						},
+						{
+							"key": "",
+							"value": "2",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/bid/create?",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"bid",
+						"create"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "5e1495f92c3ce548ccf8b343",
+							"disabled": true
+						},
+						{
+							"key": "seller_id",
+							"value": "1",
+							"disabled": true
+						},
+						{
+							"key": "item_name",
+							"value": "myitem",
+							"disabled": true
+						},
+						{
+							"key": "description",
+							"value": "Dejavu",
+							"disabled": true
+						},
+						{
+							"key": "price",
+							"value": "12",
+							"disabled": true
+						},
+						{
+							"key": "fixed_price",
+							"value": "18",
+							"disabled": true
+						},
+						{
+							"key": "quantity",
+							"value": "2",
+							"disabled": true
+						},
+						{
+							"key": "name",
+							"value": "adisakshya",
+							"disabled": true
+						},
+						{
+							"key": "image_url",
+							"value": "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/inspirational-quotes-william-james-1562000241.png?crop=1xw:1xh;center,top%26resize=480:*",
+							"disabled": true
+						},
+						{
+							"key": "curr_bidprice",
+							"value": "0",
+							"disabled": true
+						},
+						{
+							"key": "curr_highestBidderusername",
+							"value": "adisakshya",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/api/bid/create",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "item_name",
+							"value": "lauki",
+							"type": "text"
+						},
+						{
+							"key": "item_description",
+							"value": "gandh hai BC",
+							"type": "text"
+						},
+						{
+							"key": "image_url",
+							"value": "https://lauki.in",
+							"type": "text"
+						},
+						{
+							"key": "min_price",
+							"value": "30",
+							"type": "text"
+						},
+						{
+							"key": "buy_now_price",
+							"value": "40",
+							"type": "text"
+						},
+						{
+							"key": "quantity",
+							"value": "lkala",
+							"type": "text"
+						},
+						{
+							"key": "timer_limit",
+							"value": "00:15:00",
+							"type": "text"
+						},
+						{
+							"key": "curr_highestBidderusername",
+							"value": "None",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "token",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/bid/create?",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"bid",
+						"create"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "5e1495f92c3ce548ccf8b343",
+							"disabled": true
+						},
+						{
+							"key": "seller_id",
+							"value": "1",
+							"disabled": true
+						},
+						{
+							"key": "item_name",
+							"value": "myitem",
+							"disabled": true
+						},
+						{
+							"key": "description",
+							"value": "Dejavu",
+							"disabled": true
+						},
+						{
+							"key": "price",
+							"value": "12",
+							"disabled": true
+						},
+						{
+							"key": "fixed_price",
+							"value": "18",
+							"disabled": true
+						},
+						{
+							"key": "quantity",
+							"value": "2",
+							"disabled": true
+						},
+						{
+							"key": "name",
+							"value": "adisakshya",
+							"disabled": true
+						},
+						{
+							"key": "image_url",
+							"value": "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/inspirational-quotes-william-james-1562000241.png?crop=1xw:1xh;center,top%26resize=480:*",
+							"disabled": true
+						},
+						{
+							"key": "curr_bidprice",
+							"value": "0",
+							"disabled": true
+						},
+						{
+							"key": "curr_highestBidderusername",
+							"value": "adisakshya",
+							"disabled": true
+						}
+					]
+				},
+				"description": "Sending wrong type of data.\n-> Sending string in place of number."
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/api/bid/place",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"token\": \"1\",\n\t\"bid_id\": \"5e403f8edc796829b417463a\",\n\t\"bid_price\": 31,\n\t\"buyer_id\": \"adi\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/bid/place",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"bid",
+						"place"
+					],
+					"query": [
+						{
+							"key": "password",
+							"value": "test",
+							"disabled": true
+						},
+						{
+							"key": "email",
+							"value": "adi@email.email",
+							"disabled": true
+						}
+					]
+				},
+				"description": "Update Bid"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/api/bid/place",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"token\": \"1\",\n\t\"bid_id\": \"5e1713417de4a20018e86ff6\",\n\t\"bid_price\": 31,\n\t\"buyer_id\": \"mohak\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/bid/place",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"bid",
+						"place"
+					],
+					"query": [
+						{
+							"key": "password",
+							"value": "test",
+							"disabled": true
+						},
+						{
+							"key": "email",
+							"value": "adi@email.email",
+							"disabled": true
+						}
+					]
+				},
+				"description": "Wrong Bid ID Given"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/api/bid/place",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"token\": \"1\",\n\t\"bid_id\": \"5e4030db03dc6f00226d6ea1\",\n\t\"buyer_id\": \"mohak\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/bid/place",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"bid",
+						"place"
+					],
+					"query": [
+						{
+							"key": "password",
+							"value": "test",
+							"disabled": true
+						},
+						{
+							"key": "email",
+							"value": "adi@email.email",
+							"disabled": true
+						}
+					]
+				},
+				"description": "Failure: Not all parameters passed!"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/api/bid/place",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "token",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "bid_id",
+							"value": "5e403f8edc796829b417463a",
+							"type": "text"
+						},
+						{
+							"key": "buyer_id",
+							"value": "mohak",
+							"type": "text"
+						},
+						{
+							"key": "bid_price",
+							"value": "28",
+							"type": "text"
+						}
+					],
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/bid/place",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"bid",
+						"place"
+					],
+					"query": [
+						{
+							"key": "password",
+							"value": "test",
+							"disabled": true
+						},
+						{
+							"key": "email",
+							"value": "adi@email.email",
+							"disabled": true
+						}
+					]
+				},
+				"description": "Invalid Bid\nBidPrice <= MinPrice"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/api/bid/place",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"token\": \"1\",\n\t\"bid_id\": \"5e403f8edc796829b417463a\",\n\t\"bid_price\": 45,\n\t\"buyer_id\": \"mohak\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/bid/place",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"bid",
+						"place"
+					],
+					"query": [
+						{
+							"key": "password",
+							"value": "test",
+							"disabled": true
+						},
+						{
+							"key": "email",
+							"value": "adi@email.email",
+							"disabled": true
+						}
+					]
+				},
+				"description": "Invalid Bid\nBidPrice > MaxPrice"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/api/bid/place",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"token\": \"1\",\n\t\"bid_id\": \"5e3eb84eeda7380022053beb\",\n\t\"bid_price\": 45,\n\t\"buyer_id\": \"mohak\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/bid/place",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"bid",
+						"place"
+					],
+					"query": [
+						{
+							"key": "password",
+							"value": "test",
+							"disabled": true
+						},
+						{
+							"key": "email",
+							"value": "adi@email.email",
+							"disabled": true
+						}
+					]
+				},
+				"description": "Cannot be sold.\nTimer Expired."
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/api/bid/place",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"token\": \"1\",\n\t\"bid_id\": \"5e403f8edc796829b417463a\",\n\t\"bid_price\": 40,\n\t\"buyer_id\": \"mohak\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/bid/place",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"bid",
+						"place"
+					],
+					"query": [
+						{
+							"key": "password",
+							"value": "test",
+							"disabled": true
+						},
+						{
+							"key": "email",
+							"value": "adi@email.email",
+							"disabled": true
+						}
+					]
+				},
+				"description": "Sold\nBidPrice = MaxPrice"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/api/bid/place",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"token\": \"1\",\n\t\"bid_id\": \"5e403f8edc796829b417463a\",\n\t\"bid_price\": 45,\n\t\"buyer_id\": \"mohak\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/bid/place",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"bid",
+						"place"
+					],
+					"query": [
+						{
+							"key": "password",
+							"value": "test",
+							"disabled": true
+						},
+						{
+							"key": "email",
+							"value": "adi@email.email",
+							"disabled": true
+						}
+					]
+				},
+				"description": "Invalid Bid\nTrying to bid higher after Sold."
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/api/bid/place",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"token\": \"1\",\n\t\"bid_id\": \"5e403f8edc796829b417463a\",\n\t\"bid_price\": 35,\n\t\"buyer_id\": \"mohak\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/bid/place",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"bid",
+						"place"
+					],
+					"query": [
+						{
+							"key": "password",
+							"value": "test",
+							"disabled": true
+						},
+						{
+							"key": "email",
+							"value": "adi@email.email",
+							"disabled": true
+						}
+					]
+				},
+				"description": "Invalid Bid\nTrying to bid lower after Sold."
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/api/bid/place",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"token\": \"1\",\n\t\"bid_id\": \"5e4046dd1e7afe23c0697354\",\n\t\"bid_price\": 35,\n\t\"buyer_id\": \"rafactored_adi23489\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/bid/place",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"bid",
+						"place"
+					],
+					"query": [
+						{
+							"key": "password",
+							"value": "test",
+							"disabled": true
+						},
+						{
+							"key": "email",
+							"value": "adi@email.email",
+							"disabled": true
+						}
+					]
+				},
+				"description": "Seller bidding on their own produce."
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/api/bid/place",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"token\": \"1\",\n\t\"bid_id\": \"5e4046dd1e7afe23c0697354\",\n\t\"bid_price\": 36,\n\t\"buyer_id\": \"adi\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/bid/place",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"bid",
+						"place"
+					],
+					"query": [
+						{
+							"key": "password",
+							"value": "test",
+							"disabled": true
+						},
+						{
+							"key": "email",
+							"value": "adi@email.email",
+							"disabled": true
+						}
+					]
+				},
+				"description": "HigestBidder bidding again on same item without being beated by a higher bid"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/api/bid/delete",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "bid_id",
+							"value": "5e3ebb55eda7380022053bec",
+							"type": "text"
+						},
+						{
+							"key": "seller_id",
+							"value": "adi",
+							"type": "text"
+						},
+						{
+							"key": "token",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/bid/delete",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"bid",
+						"delete"
+					]
+				},
+				"description": "Non-Seller trying to delete bid."
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/api/bid/delete",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "token",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "bid_id",
+							"value": "5e17202b7de4a20017e86ff8",
+							"type": "text"
+						},
+						{
+							"key": "seller_name",
+							"value": "adi",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/bid/delete",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"bid",
+						"delete"
+					]
+				},
+				"description": "Anonymous user trying to delete a bid."
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/api/bid/delete",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "token",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "bid_id",
+							"value": "5e4046dd1e7afe23c0697352",
+							"type": "text"
+						},
+						{
+							"key": "seller_name",
+							"value": "adi",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/bid/delete",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"bid",
+						"delete"
+					]
+				},
+				"description": "Deleteing random non-existing bid."
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/api/bid/delete",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "token",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "bid_id",
+							"value": "5e4046dd1e7afe23c0697354",
+							"type": "text"
+						},
+						{
+							"key": "seller_name",
+							"value": "rafactored_adi23489",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/bid/delete",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"bid",
+						"delete"
+					]
+				},
+				"description": "Deleting a bid with bidders on it."
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/api/bid/delete",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "token",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "bid_id",
+							"value": "5e403d4a03dc6f00226d6ea2",
+							"type": "text"
+						},
+						{
+							"key": "seller_name",
+							"value": "rafactored_adi235",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/bid/delete",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"bid",
+						"delete"
+					]
+				},
+				"description": "Deleting a bid."
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
