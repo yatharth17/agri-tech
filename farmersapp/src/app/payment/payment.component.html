@@ -1,0 +1,29 @@
+<app-navbar></app-navbar>
+<main class="page payment-page">
+    <section class="clean-block payment-form dark">
+        <div class="container">
+            <div class="block-heading">
+                <h2 class="text-info" class="fix-top">Payment</h2>
+                <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quam urna, dignissim nec auctor in,
+                    mattis vitae leo.</p> -->
+            </div>
+            <form>
+                <div class="products">
+                    <h3 class="title">Checkout</h3>
+                    <div class="item"><span class="price">{{crop.fixed_price}}</span>
+                        <p class="item-name">{{crop.name}}</p>
+                        <p class="item-description">{{crop.description}}</p>
+                    </div>
+                    <div class="total"><span>Total</span><span class="price">{{crop.fixed_price}}</span></div>
+                </div>
+                <div class="card-details">
+                    <div class="col-sm-12">
+                        <div class="form-group"><button class="btn btn-primary btn-block" type="submit"
+                                (click)="payment()">Proceed</button></div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+</main>
+<app-footer></app-footer>

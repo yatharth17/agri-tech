@@ -1,0 +1,57 @@
+<app-navbar></app-navbar>
+<main class="page product-page">
+  <section class="clean-block clean-product dark">
+    <div class="container">
+      <div class="block-heading" *ngIf="!bidding">
+        <h2 class="text-info" class="fix-top">Product Page</h2>
+        <p>Find all the information about the crops here. Make sure you read all the details about the
+          crop properly before placing the bid. The bid cannot be undone after it is placed.
+        </p>
+      </div>
+      <div *ngIf="bidding">
+        <app-bidding></app-bidding>
+      </div>
+      <div class="block-content" *ngIf="!bidding">
+        <div class="product-info">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="gallery">
+                <div class="img-fluid" alt="Responsive image"><img
+                      class="img-fluid d-block mx-auto"
+                      [src]="item.image_url"></div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="info">
+                <h3>{{item.name}}</h3>
+                <div class="rating"><img src="assets/img/star.svg"><img src="assets/img/star.svg"><img
+                    src="assets/img/star.svg"><img src="assets/img/star-half-empty.svg"><img
+                    src="assets/img/star-empty.svg"></div>
+                <div class="price">
+                  <h3>{{item.price}}</h3>
+                </div><button class="btn btn-primary" type="button"><i class="icon-basket"></i>Buy Immediately</button>
+                <br>
+                <button class="btn btn-primary" type="button" (click)="togglebidding()">
+                  <i class="icon-basket"></i>Start Bidding
+                </button>
+                <div class="summary">
+                  <p *ngIf="item.sold_flag" class="alert alert-danger">Item Already Sold!!!</p>
+                  <br>
+                  <p *ngIf="!item.sold_flag">END TIME: {{this.endtime}}</p>
+                  <p *ngIf="timeout" class="alert alert-danger">TIME EXPIRED</p>
+                  <p>CurrentBid Price : {{ item.curr_bidprice }}</p>
+                  <p>Current Highest Bidder : {{ item.curr_highestBidderusername }}</p>
+                  <p>Description : {{ item.description }}</p>
+                  <p>Buy Now Price : {{ item.fixed_price }}</p>
+                  <p>Quantity : {{ item.quantity }}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <app-related-products></app-related-products>
+      </div>
+    </div>
+  </section>
+</main>
+<app-footer></app-footer>

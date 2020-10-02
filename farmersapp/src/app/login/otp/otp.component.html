@@ -1,0 +1,24 @@
+<main class="page login-page">
+    <section class="clean-block clean-form dark">
+        <div class="container">
+            <div class="block-heading" id="loginComp">
+                <h2 style="margin-top: 7rem;" class="text-info">Log In</h2>
+                <p>Please Login as the following member: <br></p>
+                <p>1. Farmer</p>
+                <p>2. Contractor</p>
+                <p>3. Vendor</p>
+            </div>
+            <form>
+                <div class="form-group"><label for="email">Phone Number</label><input [(ngModel)]="phoneNumber"
+                        name="name" class="form-control item" type="email" id="email"></div>
+                <div *ngIf="otprequested" class="form-group"><label for="password">OTP</label><input [(ngModel)]="otp"
+                        name="password" class="form-control" type="password" id="password"></div>
+                <p *ngIf="otprequested && message == ''" class="alert alert-primary" style="text-align: center;">Loading!!!!!</p>
+                <p *ngIf="otprequested && message != ''" class="alert alert-danger">{{ message }}</p>
+                <button *ngIf="!otprequested" class="btn btn-primary btn-block" type="submit" (click)="requestotp()">Request OTP</button>
+                <button *ngIf="otprequested" class="btn btn-primary btn-block" type="submit"
+                    (click)="verifyotp()">Verify OTP</button>
+            </form>
+        </div>
+    </section>
+</main>
